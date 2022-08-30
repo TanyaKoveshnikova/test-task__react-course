@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <main class="container">
+        <section class="about-us">
+            <h1>Мастер-классы от Create Studio</h1>
+
+            <button type="submit" class="btn" id="openModalBtn">Записаться</button>
+        </section>
+    </main>
+
+    <div class="modal" id="myModal">
+        <div class="modal__window">
+            <div class="content">
+                <div class="title">Заявка на участие</div>
+                <form id="form-data" method="post" class="form">
+                    <input name="name" required type="text" class="value__input" placeholder="ФИО">
+                    <input name="email" required type="email" class="value__input" placeholder="E-mail">
+                    <button class="btn__modal__close" type="submit">Отправить</button>
+                    <div id="loader" class="statusElement hidden">Отправляем заявку...</div>
+                    <div id="success" class="statusElement greenStatus hidden">Ваша заявка успешно отправлена.</div>
+                    <div id="error" class="statusElement redStatus hidden">Упс, что-то пошло не по плану, зайдите позже...</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-shadow"></div>
+<script src="modal.js"></script>
+</body>
+</html>
